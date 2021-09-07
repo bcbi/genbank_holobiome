@@ -92,9 +92,9 @@ timed out after that so it should've run correctly.
 
 If you are working off of command line and on a remote server, and cannot download the mySQL
 tables directly, you will need to use MySQLDump. 
-
-$ mysqldump --enable-cleartext-plugin -h <DBname> -u <username> -p <password> genbank tissueLocus > tissueLocus.sql
-
+```
+mysqldump --enable-cleartext-plugin -h <DBname> -u <username> -p <password> genbank tissueLocus > tissueLocus.sql
+```
 ** occasionally I have noticed that the space between "-p" and the password can cause errors. 
 Try using without a space between the -p flag and the password if this occurs. 
 
@@ -102,9 +102,9 @@ Try using without a space between the -p flag and the password if this occurs.
 
 To convert .SQL files into .CSV, I used a preexisting Python program called mysqldump-to-csv 
 that I updated for this project specifically. 
-
-$python3 mysqldump-to-csvV2.py <file.SQL>
-
+```
+python3 mysqldump-to-csvV2.py <file.SQL>
+```
 Now the data should be in a CSV format and ready to process moving forward. These are the files
 you should have: 
     - isolationLocus.csv
@@ -120,17 +120,17 @@ The Locus files are the ones that will go through the upstream process (not allB
 This file processes CSVs into TXT files for MetaMap to take in as input. 
 Input: source site CSV (ex: tissueLocus.csv, isolationLocus.csv, or hostLocus.csv)
 Output: appropriate MetaMap input format for text file (sourceSite_MetaMap_input.txt)
-
-$ julia upstream_1_valueCSV_parser.jl sourceSiteLocus.csv sourceSite_MetaMap_input.txt
-
+```
+julia upstream_1_valueCSV_parser.jl sourceSiteLocus.csv sourceSite_MetaMap_input.txt
+```
 2. Running MetaMap
-
+```
 $ ./public_mm/bin/wsdserverctl start
 $ ./public_mm/bin/skrmedpostctl start
 $ ./public_mm/bin/metamap -I sourceSite_MetaMap_input.txt sourceSite_MetaMap_output.txt
 $ ./public_mm/bin/wsdserverctl stop
 $ ./public_mm/bin/skrmedpostctl stop
-
+```
 ** In particular, the isolationLocus.CSV was much larger than the other files for me. I
 had to split this file into 5 files to get MetaMap to run on each one individually,
 then joined them all together after for the following steps. 
@@ -149,23 +149,23 @@ Output: 1) sourceSite_MetaMap_parsed.csv
             - semanticType: semantic type associated with each MetaMap concept
         2) sourceSite_CUI.csv
             - CUI: concept unique identifiers
-
+```
 $ julia upstream_2_metamapParser.jl sourceSite_MetaMap_output.txt semanticTypes.txt sourceSite_MetaMap_parse.csv sourceSite_CUI.csv
-
+```
 4. upstream_3_createBacteriaSpecieFile.jl
 
 Now the appropriate bacteria species data need to be filtered out from allBacteriaSpecies.csv
 file for each source site. This will be a large file. 
-
+```
 $ julia upstream_3_createBacteriaSpecieFile.jl sourceSiteLocus.csv allBacteriaSpecies.csv sourceSite_bacteriaSpecies.csv
-
+```
 5. upstream_4_speciesPreferredMapping.jl
 
 Finally, we can merge the bacteria species data for each source site from upstream_3 and the 
 metamap preferred names from upstream_2 metamap parsing. 
-
+```
 $ julia upstream_4_speciesPreferredMapping.jl sourceSite_MetaMap_parsed.csv sourceSite_bacteriaSpecies.csv sourceSite_bacteriaSpecies_preferred.csv
-
+```
 You finished the Upstream Processes! 
 
 ## Updating Cleaned_Host_Annotations
@@ -176,9 +176,13 @@ of MetaMap concepts.
 
 1. hostClean_1_cleaningHosts.py
 
-This script is a first manual run-through of cleaning the host names. IT also changes the column names
+This script is a first manual run-through of cleaning the host names. It also changes the column names
 of the host_bacteriaSpecies_preferred.csv file to the columns of the original cleaned_host_annotations.csv
 file and adds a cleaned "updatedScientificName" column that is the most up-to-date host name. 
+
+```
+python3 hostClean_1_cleaningHosts.pyy hostData/host_bacteriaSpecies_preferred.csv hostTaxDict.txt
+```
 
 Input: 1) host_bacteriaSpecies_preferred.csv
         2) hostTaxDict.txt
@@ -194,6 +198,10 @@ not always successful however due to variation and grammatical issues in the way
 I used it because it was valuable in coordinating common names vs. scientific names, however when the host
 names are kept as genus rather than species, we did not merge them because of different taxonomical levels.  
 
+```
+python3 hostClean_2_searchHosts.py cleaned_hostData.csv
+```
+
 Input: updated_cleanedhost.csv
 Output: cleaned_hostData.csv
 
@@ -203,9 +211,9 @@ Output: cleaned_hostData.csv
 
 This script maps the data from sourceSite_bacteriaSpecies_preferred.csv to the data in 
 cleaned_host_annotations.csv
-
+```
 $ julia downstream_1_createHostSpecies.jl cleaned_host_annotations.csv sourceSite_bacteriaSpecies_preferred.csv sourceSite_Host_Bacteria.csv
-
+```
 2. downstream_2_mergeAndGroup.py
 
 This script takes the two source site CSVs (isolation_source and tissue_type) and merges them together. 
@@ -216,9 +224,9 @@ Input: 1) isolation_Host_Bacteria.csv
         2) tissue_Host_Bacteria.csv
         3) sourceGroupings.txt
 Output: merged_Host_Bacteria.csv
-
+```
 $ python3 downstream_2_mergeAndGroup.py isolation_Host_Bacteria.csv tissue_Host_Bacteria.csv sourceGroupings.txt merged_Host_Bacteria.csv 
-
+```
 #### Cleaning Species Names and Processing Taxonomically
 
 The bacterial species names are quite varied and also do not allow us to look at groupings of bacteria 
@@ -234,9 +242,9 @@ up into around 15,000 entries each and run on weekdays after 5 pm or weekends.
 
 Input: a text file with all of the unique species names available
 Output: taxonomyDict.txt in the same directory
-
+```
 $ python3 speciesClean_1_searchSpecies.py speciesNameFile.txt
-
+```
 3. speciesClean_1_updateCSV.py
 
 Now, we update the merged_Host_Bacteria.csv file with the taxonomy information generated by
@@ -245,9 +253,9 @@ before hand to make sure that the length of that file matches the length of the 
 names file (before splitting) to make sure the file is correct. 
 
 Output: merged_Host_Bacteria_Species.csv 
-
+```
 $ python3 speciesClean_1_updateCSV.py merged_Host_Bacteria.csv taxonomyDict.txt 
-
+```
 #### Going back to the Downstream Process
 
 3. downstream_3_createMatrix.jl
@@ -255,8 +263,9 @@ $ python3 speciesClean_1_updateCSV.py merged_Host_Bacteria.csv taxonomyDict.txt
 In downstream 3, we create the matrix file that PAUP will input to create a phylogenetic tree. 
 This script has been updated from the previous version to include more command line arguments
 to customize the grouping and host requirements before making the PAUP file. 
-
+```
 $ julia downstream_3_createMatrix.jl <search term> merged_Host_Bacteria_Spcies.csv <output.nex> <group or specific> <taxonomic resolution> <row number limit>
+```
 - Search Term: this will be the term that is searched in either the group or species column
     - Group example: GI, ORAL
     - Specific example: Intestine, Stomach
@@ -276,15 +285,15 @@ Outputs:
 Downstream 4 creates a coverage file from the raw coverage file created by downstream 3 (group_coverage.txt) 
 in hostFiles. This coverage file is used by downstream 5 to ensure equal coverage amongst hosts that have
 high amounts of data and hosts that have low amounts of data. 
-
+```
 $ python3 downstream_4_coverage.py hostFiles/<group>_coverage.txt <output.txt>
-
+``` 
 5. downstream_5_dataType.py
 
 Finally, downstream 5 updates the matrix nexus file with a few pieces of information for final visualization.
-
+```
 $ python3 downstream_5_dataType.py <outputDS3.nex> hostUpdates.csv <output names> <upper threshold for coverage> <outputDS4.txt>
-
+```
 - outputDS3.nex: output from Downstream 3
 - hostUpdates.csv: This is a CSV I manually created to ensure which hosts ended up in the final file
     - Columns: Newick_label, updatedScientificName, Diet, family, order, class, correctedName, domestication
@@ -304,14 +313,14 @@ $ python3 downstream_5_dataType.py <outputDS3.nex> hostUpdates.csv <output names
 ## PAUP Trees and Visualizaton
 
 #### Neighbor Joining Commands: 
-
+```
 execute <filename> 
 set criterion=distance maxtrees=200 increase=no
 hsearch
 set root=outgroup
 outgroup <name of single host or multiple>
 nj brlens=yes treefile=<outputFile>
-
+```
 #### Finding Outgroups: 
 
 Using timetree.org, upload the hostFiles/<group>_updated.txt file from downstream 5. Then use the 
