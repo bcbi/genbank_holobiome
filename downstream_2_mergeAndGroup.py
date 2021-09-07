@@ -1,5 +1,11 @@
 """
-midstream 2
+Downstream 2 - Merges the isolation and tissue CSVs created by Downstream 1
+and also adds the grouping category to the final CSV
+
+Inputs: 1) isolation_BacteriaPreferred.csv
+        2) tissue_bacteriaPreferred.csv
+        3) sourceGroupings.txt
+
 """
 import pandas as pd
 import sys

@@ -1,0 +1,252 @@
+Newick_label,updatedScientificName,Diet,family,order,class,correctedName,domestication
+Pseudosciaena_crocea,Pseudosciaena crocea,O,Sciaenidae,Larimichthys,Actinopteri,,W
+Channa_punctata,Channa punctata,O,Channidae,Anabantiformes,Actinopteri,,W
+Rutilus_rutilus,Rutilus rutilus,O,Leuciscidae,Cypriniformes,Actinopteri,,W
+Siganus_fuscescens,Siganus fuscescens,H,Siganidae,Siganus,Actinopteri,,W
+Oncorhynchus_mykiss,Oncorhynchus mykiss,C,Salmonidae,Salmoniformes,Actinopteri,,D
+Anguilla_japonica,Anguilla japonica,C,Anguillidae,Anguilliformes,Actinopteri,,W
+Lates_calcarifer,Lates calcarifer,C,Centropomidae,Lates,Actinopteri,,W
+Oreochromis_niloticus,Oreochromis niloticus,O,Cichlidae,Cichliformes,Actinopteri,,D
+Tilapia,Tilapia,O,Cichlidae,Cichliformes,Actinopteri,,D
+Salmo,Salmo,O,Salmonidae,Salmoniformes,Actinopteri,,D
+Perca_fluviatilis,Perca fluviatilis,C,Percidae,Perciformes,Actinopteri,,W
+Solea_senegalensis,Solea senegalensis,O,Soleidae,Pleuronectiformes,Actinopteri,,W
+Nile_Tilapia,Nile Tilapia,O,Cichlidae,Cichliformes,Actinopteri,Oreochromis_niloticus,D
+Syngnathus_typhle,Syngnathus typhle,C,Syngnathidae,Syngnathiformes,Actinopteri,,W
+Cyprinus_carpio,Cyprinus carpio,O,Cyprinidae,Cypriniformes,Actinopteri,,D
+Tor_tambroides,Tor tambroides,O,Cyprinidae,Cypriniformes,Actinopteri,,W
+Diplodus_sargus,Diplodus sargus,O,Sparidae,Spariformes,Actinopteri,,W
+Ctenopharyngodon_idella,Ctenopharyngodon idella,H,Xenocyprididae,Cypriniformes,Actinopteri,,W
+Chilomycterus_schoepfi,Chilomycterus schoepfi,C,Diodontidae,Tetraodontiformes,Actinopteri,,W
+Neocirrhites_armatus,Neocirrhites armatus,O,Cirrhitidae,Centrarchiformes,Actinopteri,,W
+Danio_rerio,Danio rerio,O,Danionidae,Cypriniformes,Actinopteri,,W
+Heteropneustes_fossilis,Heteropneustes fossilis,O,Heteropneustidae,Siluriformes,Actinopteri,,W
+Alosa_alosa,Alosa alosa,O,Clupeidae,Clupeiformes,Actinopteri,,W
+Lepomis_macrochirus,Lepomis macrochirus,C,Centrarchidae,Centrarchiformes,Actinopteri,,W
+Wallago_attu,Wallago attu,O,Siluridae,Siluriformes,Actinopteri,,W
+Xenentodon_cancila,Xenentodon cancila,C,Belonidae,Beloniformes,Actinopteri,,W
+Sciaenops_ocellatus,Sciaenops ocellatus,O,Sciaenidae,Sciaenops,Actinopteri,,W
+Selenotoca_multifasciata,Selenotoca multifasciata,O,Scatophagidae,Selenotoca,Actinopteri,,W
+Siganus_rivulatus,Siganus rivulatus,H,Siganidae,Siganus,Actinopteri,,W
+Etroplus_suratensis,Etroplus suratensis,O,Cichlidae,Cichliformes,Actinopteri,,W
+Seriola_dumerili,Seriola dumerili,C,Carangidae,Carangiformes,Actinopteri,,W
+Mugil_cephalus,Mugil cephalus,H,Mugilidae,Mugiliformes,Actinopteri,,W
+Aplodactylus_punctatus,Aplodactylus punctatus,O,Aplodactylidae,Centrarchiformes,Actinopteri,,W
+Fugu,Fugu,O,Tetraodontidae,Tetraodontiformes,Actinopteri,Takifugu_obscurus,W
+Grass_Carp,Grass Carp,H,Xenocyprididae,Cypriniformes,Actinopteri,,D
+Squalius_cephalus,Squalius cephalus,O,Leuciscidae,Cypriniformes,Actinopteri,,W
+Hypophthalmichthys_molitrix,Hypophthalmichthys molitrix,H,Xenocyprididae,Cypriniformes,Actinopteri,,W
+Paralichthys_adspersus,Paralichthys adspersus,C,Paralichthyidae,Pleuronectiformes,Actinopteri,,W
+Micropterus_salmoides,Micropterus salmoides,O,Centrarchidae,Centrarchiformes,Actinopteri,,W
+Anguilla_marmorata,Anguilla marmorata,C,Anguillidae,Anguilliformes,Actinopteri,,W
+Takifugu_obscurus,Takifugu obscurus,O,Tetraodontidae,Tetraodontiformes,Actinopteri,,W
+Sabethes_Gymnothorax,Sabethes Gymnothorax,C,Muraenidae,Anguilliformes,Actinopteri,Gymnothorax,W
+Kareius_bicoloratus,Kareius bicoloratus,C,Pleuronectidae,Pleuronectiformes,Actinopteri,,W
+Pufferfish,Pufferfish,C,Tetradontidae,Tetraodontiformes,Actinopteri,,W
+Leptodactylus_latrans,Leptodactylus latrans,C,Leptodactylidae,Anura,Amphibia,,W
+Xenopus_laevis,Xenopus laevis,C,Pipidae,Anura,Amphibia,,W
+Red-spotted_newt,Red-spotted newt,C,Salamandridae,Caudata,Amphibia,,W
+Gallus_gallus,Gallus gallus,O,Phasianidae,Galliformes,Aves,,D
+Anas_platyrhynchos,Anas platyrhynchos,O,Anatidae,Anseriformes,Aves,,D
+Platycercus_elegans,Platycercus elegans,H,Psittacidae,Psittaciformes,Aves,,W
+Columba_livia,Columba livia,H,Columbidae,Columbiformes,Aves,,D
+Cairina_moschata,Cairina moschata,O,Anatidae,Anseriformes,Aves,,D
+Corvus,Corvus,O,Corvidae,Passeriformes,Aves,,W
+Anser_anser,Anser anser,H,Anatidae,Anseriformes,Aves,,D
+Callipepla,Callipepla,H,Odontophoridae,Galliformes,Aves,,D
+Abrornis_inornata,Abrornis inornata,C,Phylloscopidae,Passeriformes,Aves,,W
+Grus_japonensis,Grus japonensis,O,Gruidae,Gruiformes,Aves,,W
+Grus_americana,Grus americana,O,Gruidae,Gruiformes,Aves,,W
+Cinereous_vulture,Cinereous vulture,C,Accipitridae,Accipitriformes,Aves,,W
+Pygoscelis_antarctica,Pygoscelis antarctica,C,Spheniscidae,Sphenisciformes,Aves,,W
+Meleagris_gallopavo,Meleagris gallopavo,O,Phasianidae,Galliformes,Aves,,D
+Anser_albifrons,Anser albifrons,H,Anatidae,Anseriformes,Aves,,W
+Struthio_camelus,Struthio camelus,H,Struthionidae,Struthioniformes,Aves,,W
+Emberiza_tristrami,Emberiza tristrami,O,Fringillidae,Passeriformes,Aves,,W
+Ostrich,Ostrich,H,Struthionidae,Struthioniformes,Aves,Struthio_camelus,W
+Phasianus_colchicus,Phasianus colchicus,O,Phasianidae,Galliformes,Aves,,D
+Calidris_fuscicollis,Calidris fuscicollis,C,Scolopacidae,Charadriiformes,Aves,,W
+Melopsittacus_undulatus,Melopsittacus undulatus,H,Psittaculidae,Psittaciformes,Aves,,W
+Pavo_cristatus,Pavo cristatus,O,Phasianidae,Galliformes,Aves,,W
+Anas_superciliosa,Anas superciliosa,O,Anatidae,Anseriformes,Aves,,W
+Taeniopygia_guttata,Taeniopygia guttata,O,Estrildidae,Passeriformes,Aves,,W
+Anser_cygnoides,Anser cygnoides,H,Anatidae,Anseriformes,Aves,,D
+Anser_indicus,Anser indicus,H,Anatidae,Anseriformes,Aves,,W
+Tyto_alba,Tyto alba,C,Tytonidae,Strigiformes,Aves,,W
+Phoenicopteridae,Phoenicopteridae,O,Phoenicopteriformes,Phoenicopteriformes,Aves,,W
+Lanius_cristatus,Lanius cristatus,C,Laniidae,Passeriformes,Aves,,W
+Luscinia_cyanura,Luscinia cyanura,O,Turdidae,Passeriformes,Aves,,W
+Abrornis_proregulus,Abrornis proregulus,C,Phylloscopidae,Passeriformes,Aves,,W
+Partridge,Partridge,O,Phasianidae,Galliformes,Aves,,D
+Pheasant,Pheasant,O,Phasianidae,Galliformes,Aves,,D
+Swan,Swan,O,Anatidae,Anseriformes,Aves,Anser_cygnoides,W
+Octopus_vulgaris,Octopus vulgaris,C,Octopodidae,Octopoda,Cephalopoda,,W
+Octopus_mimus,Octopus mimus,C,Octopodidae,Octopoda,Cephalopoda,,W
+Zearaja_nasuta,Zearaja nasuta,C,Rajidae,Rajiformes,Chondrichthyes,,W
+Black_Bear,Black Bear,O,Ursidae,Carnivora,Mammalia,Ursus_americanus,W
+Fox,Fox,O,Canidae,Carnivora,Mammalia,Vulpes_vulpes,W
+Arctocephalus_australis,Arctocephalus australis,C,Otariidae,Carnivora,Mammalia,,W
+Macaca_mulatta,Macaca mulatta,O,Cercopithecidae,Primates,Mammalia,,W
+Camelus_dromedarius,Camelus dromedarius,H,Camelidae,Artiodactyla,Mammalia,,D
+Equus_caballus,Equus caballus,H,Equidae,Perissodactyla,Mammalia,,D
+Eidolon_helvum,Eidolon helvum,H,Pteropodidae,Chiroptera,Mammalia,,W
+Eptesicus_fuscus,Eptesicus fuscus,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Hydrochoerus_hydrochaeris,Hydrochoerus hydrochaeris,H,Hydrochaeridae,Rodentia,Mammalia,,W
+Gorilla,Gorilla,H,Hominidae,Primates,Mammalia,Gorilla_gorilla,W
+Mus_musculus,Mus musculus,O,Muridae,Rodentia,Mammalia,,D
+Dama_dama,Dama dama,H,Cervidae,Artiodactyla,Mammalia,,W
+Ovis_aries,Ovis aries,H,Bovidae,Artiodactyla,Mammalia,,D
+Lama_glama,Lama glama,H,Camelidae,Artiodactyla,Mammalia,,D
+Bos_taurus,Bos taurus,H,Bovidae,Artiodactyla,Mammalia,,D
+Canis_familiaris,Canis familiaris,O,Canidae,Carnivora,Mammalia,,D
+Capra_hircus,Capra hircus,H,Bovidae,Artiodactyla,Mammalia,Capra_aegagrus_hircus,D
+Rousettus_egyptiacus,Rousettus egyptiacus,O,Pteropodidae,Chiroptera,Mammalia,,W
+Callithrix_jacchus,Callithrix jacchus,O,Cebidae,Primates,Mammalia,,W
+Tadarida_brasiliensis,Tadarida brasiliensis,C,Molossidae,Chiroptera,Mammalia,,W
+Northern_redbacked_vole,Northern redbacked vole,O,Cricetidae,Rodentia,Mammalia,,W
+Bos_primigenius,Bos primigenius,H,Bovidae,Artiodactyla,Mammalia,Bos_taurus,D
+Capra_aegagrus_hircus,Capra aegagrus hircus,O,Bovidae,Artiodactyla,Mammalia,,D
+Rupicapra_rupicapra,Rupicapra rupicapra,H,Bovidae,Artiodactyla,Mammalia,,W
+Pan_troglodytes,Pan troglodytes,O,Hominidae,Primates,Mammalia,,W
+Sus_scrofa,Sus scrofa,O,Suidae,Artiodactyla,Mammalia,,D
+Miniopterus_schreibersii,Miniopterus schreibersii,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Rat,Rat,O,Muridae,Rodentia,Mammalia,Rattus_rattus,D
+Eothenomys_cachinus,Eothenomys cachinus,O,Cricetidae,Rodentia,Mammalia,,W
+Acerodon_celebensis,Acerodon celebensis,O,Pteropodidae,Chiroptera,Mammalia,,W
+Homo_sapiens,Homo sapiens,O,Hominidae,Primates,Mammalia,,D
+Epomophorus_gambianus,Epomophorus gambianus,H,Pteropodidae,Chiroptera,Mammalia,,W
+Felis_catus,Felis catus,C,Felidae,Carnivora,Mammalia,,D
+Pteropus_alecto,Pteropus alecto,H,Pteropodidae,Chiroptera,Mammalia,,W
+Cervus_nippon,Cervus nippon,H,Cervidae,Artiodactyla,Mammalia,,D
+Pantholops_hodgsonii,Pantholops hodgsonii,H,Bovidae,Artiodactyla,Mammalia,,W
+Delphinus,Delphinus,C,Delphinidae,Artiodactyla,Mammalia,Tursiops_truncatus,W
+Rattus_norvegicus,Rattus norvegicus,O,Muridae,Rodentia,Mammalia,,D
+Bison_bison,Bison bison,H,Bovidae,Artiodactyla,Mammalia,,D
+Buffalo,Buffalo,H,Bovidae,Artiodactyla,Mammalia,Bubalis_bubalis,D
+Pipistrellus_pipistrellus,Pipistrellus pipistrellus,O,Vespertilionidae,Chiroptera,Mammalia,,W
+Myotis_daubentonii,Myotis daubentonii,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Bos_indicus,Bos indicus,H,Bovidae,Artiodactyla,Mammalia,,D
+Raccoon,Raccoon,O,Procyonidae,Carnivora,Mammalia,Procyon_lotor,W
+Crossbred_cattle,Crossbred cattle,H,Bovidae,Artiodactyla,Mammalia,Bos_taurus,D
+Elephas_maximus,Elephas maximus,H,Elephantidae,Proboscidea,Mammalia,,D
+Artibeus_hirsutus,Artibeus hirsutus,H,Phyllostomidae,Chiroptera,Mammalia,,W
+Canis_lupus,Canis lupus,O,Canidae,Carnivora,Mammalia,,W
+Pan_paniscus,Pan paniscus,O,Hominidae,Primates,Mammalia,,W
+Pronghorn,Pronghorn,H,Antilocapridae,Artiodactyla,Mammalia,,W
+Tapir,Tapir,H,Tapiridae,Perissodactyla,Mammalia,,W
+Neophocaena_phocaenoides_asiaeorientalis,Neophocaena phocaenoides asiaeorientalis,C,Phocoenidae,Artiodactyla,Mammalia,,W
+Gorilla_gorilla,Gorilla gorilla,H,Hominidae,Primates,Mammalia,Gorilla_gorilla,W
+Phascolarctos_cinereus,Phascolarctos cinereus,H,Phascolarctidae,Diprotodontia,Mammalia,,W
+Hamster,Hamster,O,Cricetidae,Rodentia,Mammalia,,D
+Taphozous_perforatus,Taphozous perforatus,C,Emballonuridae,Chiroptera,Mammalia,,W
+Myodes_rutilus,Myodes rutilus,H,Cricetidae,Rodentia,Mammalia,,W
+Hipposideros_larvatus,Hipposideros larvatus,O,Hipposideridae,Chiroptera,Mammalia,,W
+Chinchilla,Chinchilla,O,Chinchillidae,Rodentia,Mammalia,,D
+Western_gray_kangaroo,Western gray kangaroo,H,Macropodidae,Diprotodontia,Mammalia,,W
+Rattus_exulans,Rattus exulans,O,Muridae,Rodentia,Mammalia,,W
+Molossus_molossus,Molossus molossus,C,Molossidae,Chiroptera,Mammalia,,W
+Mastomys_natalensis,Mastomys natalensis,O,Muridae,Rodentia,Mammalia,,W
+Oligoryzomys_nigripes,Oligoryzomys nigripes,O,Cricetidae,Rodentia,Mammalia,,W
+Marmot,Marmot,O,Sciuridae,Rodentia,Mammalia,,W
+Reeve's_muntjac,Reeve's muntjac,H,Cervidae,Artiodactyla,Mammalia,,W
+Rhinopithecus_bieti,Rhinopithecus bieti,H,Cercopithecidae,Primates,Mammalia,,W
+Chaerephon_pumilus,Chaerephon pumilus,C,Molossidae,Chiroptera,Mammalia,,W
+Asian_elephant,Asian elephant,H,Elephantidae,Proboscidea,Mammalia,Elephas_maximus,D
+Trichechus_manatus_manatus,Trichechus manatus manatus,H,Trichechidae,Sirenia,Mammalia,,W
+Rattus,Rattus,O,Muridae,Rodentia,Mammalia,Rattus_rattus,D
+Rattus_rattus,Rattus rattus,O,Muridae,Rodentia,Mammalia,,D
+Suncus_murinus,Suncus murinus,O,Soricidae,Eulipotyphla,Mammalia,,W
+Apodemus_agrarius,Apodemus agrarius,O,Muridae,Rodentia,Mammalia,,W
+Macaca_fascicularis,Macaca fascicularis,O,Cercopithecidae,Primates,Mammalia,,W
+Bubalus_bubalis,Bubalus bubalis,H,Bovidae,Artiodactyla,Mammalia,,D
+Sus,Sus,O,Suidae,Artiodactyla,Mammalia,Sus_scrofa,D
+Yak,Yak,H,Bovidae,Artiodactyla,Mammalia,Bos_grunniens,D
+Apodemus_flavicollis,Apodemus flavicollis,O,Muridae,Rodentia,Mammalia,,W
+Neovison_vison,Neovison vison,C,Mustelidae,Carnivora,Mammalia,,D
+Cavia_porcellus,Cavia porcellus,O,Caviidae,Rodentia,Mammalia,,D
+Oryctolagus_cuniculus,Oryctolagus cuniculus,H,Leporidae,Lagomorpha,Mammalia,,D
+Tibetan_antelope,Tibetan antelope,H,Bovidae,Artiodactyla,Mammalia,,W
+Cervus_elaphus,Cervus elaphus,H,Cervidae,Artiodactyla,Mammalia,,W
+Deer,Deer,H,Artiodactyla,Artiodactyla,Mammalia,Cervus_nippon,D
+Microtus_arvalis,Microtus arvalis,H,Cricetidae,Rodentia,Mammalia,,W
+Rabbit,Rabbit,H,Leporidae,Lagomorpha,Mammalia,Oryctolagus_cuniculus,D
+Meles_meles,Meles meles,O,Mustelidae,Carnivora,Mammalia,,W
+Carollia_perspicillata,Carollia perspicillata,H,Phyllostomidae,Chiroptera,Mammalia,,W
+Vulpes_vulpes,Vulpes vulpes,O,Canidae,Carnivora,Mammalia,,W
+Marmota_himalayana,Marmota himalayana,H,Sciuridae,Rodentia,Mammalia,,W
+Myodes_glareolus,Myodes glareolus,O,Cricetidae,Rodentia,Mammalia,,W
+Giant_panda,Giant panda,H,Ursidae,Carnivora,Mammalia,,W
+Lemur_catta,Lemur catta,H,Lemuridae,Primates,Mammalia,,W
+Microtus_agrestis,Microtus agrestis,H,Cricetidae,Rodentia,Mammalia,,W
+Alpaca,Alpaca,H,Camelidae,Artiodactyla,Mammalia,Vicugna_pacos,D
+Red_deer,Red deer,H,Cervidae,Artiodactyla,Mammalia,,W
+Tammar_wallaby,Tammar wallaby,H,Macropodidae,Diprotodontia,Mammalia,,W
+Elephant,Elephant,H,Elephantidae,Proboscidea,Mammalia,Elephas_maximus,D
+Panthera_leo,Panthera leo,C,Felidae,Carnivora,Mammalia,,W
+Alces_alces,Alces alces,H,Cervidae,Artiodactyla,Mammalia,,W
+Macaca_fuscata,Macaca fuscata,O,Cercopithecidae,Primates,Mammalia,,W
+Zalophus_californianus,Zalophus californianus,C,Otariidae,Carnivora,Mammalia,,W
+Sloth_bear,Sloth bear,O,Ursidae,Carnivora,Mammalia,,W
+Vicugna_pacos,Vicugna pacos,H,Camelidae,Artiodactyla,Mammalia,,D
+Tursiops_truncatus,Tursiops truncatus,C,Delphinidae,Artiodactyla,Mammalia,,W
+Macropus_eugenii,Macropus eugenii,H,Macropodidae,Diprotodontia,Mammalia,,W
+Equus_africanus_asinus,Equus africanus asinus,H,Equidae,Perissodactyla,Mammalia,,W
+Papio_hamadryas,Papio hamadryas,O,Cercopithecidae,Primates,Mammalia,,W
+Sika_deer,Sika deer,H,Cervidae,Artiodactyla,Mammalia,,W
+Bos_frontalis,Bos frontalis,H,Bovidae,Artiodactyla,Mammalia,,D
+Budorcas_taxicolor,Budorcas taxicolor,H,Bovidae,Artiodactyla,Mammalia,,W
+Procyon_lotor,Procyon lotor,O,Procyonidae,Carnivora,Mammalia,,W
+Rattus_tanezumi,Rattus tanezumi,O,Muridae,Rodentia,Mammalia,,W
+Pteropus_giganteus,Pteropus giganteus,H,Pteropodidae,Chiroptera,Mammalia,,W
+Gorilla_gorilla_gorilla,Gorilla gorilla gorilla,H,Hominidae,Primates,Mammalia,Gorilla_gorilla,W
+Vulpes_lagopus,Vulpes lagopus,O,Canidae,Carnivora,Mammalia,,W
+Plecotus_auritus,Plecotus auritus,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Lepus_europaeus,Lepus europaeus,H,Leporidae,Lagomorpha,Mammalia,,W
+Pongo_pygmaeus,Pongo pygmaeus,H,Hominidae,Primates,Mammalia,,W
+Kangaroo,Kangaroo,H,Macropodidae,Diprotodontia,Mammalia,,W
+Pteropus_lylei,Pteropus lylei,H,Pteropodidae,Chiroptera,Mammalia,,W
+Orangutan,Orangutan,H,Hominidae,Primates,Mammalia,Pongo_pygmaeus,W
+Saimiri_sciureus,Saimiri sciureus,H,Cebidae,Primates,Mammalia,,W
+Canis_latrans,Canis latrans,C,Canidae,Carnivora,Mammalia,,W
+Miniopterus_fuliginosus,Miniopterus fuliginosus,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Cynopterus_brachyotis,Cynopterus brachyotis,H,Pteropodidae,Chiroptera,Mammalia,,W
+Eptesicus_serotinus,Eptesicus serotinus,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Pipistrellus_pygmaeus,Pipistrellus pygmaeus,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Ferret,Ferret,C,Mustelidae,Carnivora,Mammalia,,D
+Hipposideros_gigas,Hipposideros gigas,C,Hipposideridae,Chiroptera,Mammalia,,W
+Rhinolophus_ferrumequinum,Rhinolophus ferrumequinum,C,Rhinolophidae,Chiroptera,Mammalia,,W
+Sorex_araneus,Sorex araneus,C,Soricidae,Eulipotyphla,Mammalia,,W
+Canis_mesomelas,Canis mesomelas,C,Canidae,Carnivora,Mammalia,,W
+Nyctalus_noctula,Nyctalus noctula,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Mandrillus_sphinx,Mandrillus sphinx,O,Cercopithecidae,Primates,Mammalia,,W
+Scotophilus_kuhlii,Scotophilus kuhlii,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Arctocephalus_tropicalis,Arctocephalus tropicalis,C,Otariidae,Carnivora,Mammalia,,W
+Myotis_nattereri,Myotis nattereri,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Myotis_ricketti,Myotis ricketti,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Myotis_horsfieldii,Myotis horsfieldii,C,Vespertilionidae,Chiroptera,Mammalia,,W
+Triaenops_persicus,Triaenops persicus,H,Rhinonycteridae,Chiroptera,Mammalia,,W
+Rhinolophus_affinis,Rhinolophus affinis,C,Rhinolophidae,Chiroptera,Mammalia,,W
+Hipposideros_armiger,Hipposideros armiger,C,Hipposideridae,Chiroptera,Mammalia,,W
+Tibetan_pig,Tibetan pig,O,Suidae,Artiodactyla,Mammalia,Sus_scrofa,D
+Gorilla_beringei,Gorilla beringei,H,Hominidae,Primates,Mammalia,,W
+Wild_rat,Wild rat,O,Muridae,Rodentia,Mammalia,Rattus_rattus,D
+Eulemur_fulvus,Eulemur fulvus,H,Lemuridae,Primates,Mammalia,,W
+Leopard,Leopard,C,Felidae,Carnivora,Mammalia,,W
+Mirounga_angustirostris,Mirounga angustirostris,C,Phocidae,Carnivora,Mammalia,,W
+Pongo_abelii,Pongo abelii,O,Hominidae,Primates,Mammalia,,W
+Papio_anubis,Papio anubis,O,Cercopithecidae,Primates,Mammalia,,W
+Macaca_sylvanus,Macaca sylvanus,O,Cercopithecidae,Primates,Mammalia,,W
+Crocidura_hirta,Crocidura hirta,C,Soricidae,Eulipotyphla,Mammalia,,W
+Carollia_sowelli,Carollia sowelli,H,Phyllostomidae,Chiroptera,Mammalia,,W
+Mandrillus_leucophaeus,Mandrillus leucophaeus,O,Cercopithecidae,Primates,Mammalia,,W
+Sapajus_nigritus,Sapajus nigritus,H,Cebidae,Primates,Mammalia,,W
+Manatee,Manatee,H,Tichechidae,Sirenia,Mammalia,Trichechus,W
+Wallaby,Wallaby,H,Macropodidae,Diprotodontia,Mammalia,Macropus_eugenii,W
+Wolf,Wolf,C,Canidae,Carnivora,Mammalia,Canis_lupus,W
+Wombat,Wombat,H,Vombatidae,Diprotodontia,Mammalia,,W
+Zebra,Zebra,H,Equidae,Perissodactyla,Mammalia,,W
+Caretta_caretta,Caretta caretta,O,Cheloniidae,Testudines,Reptilia,,W
+Python,Python,C,Pythonidae,Squamata,Reptilia,,W
+Japalura_polygonata,Japalura polygonata,C,Agamidae,Squamata,Reptilia,,W
+Bothrops_insularis,Bothrops insularis,C,Viperidae,Squamata,Reptilia,,W
+Tortoise,Tortoise,H,Testidomodae,Testudines,Reptilia,,W

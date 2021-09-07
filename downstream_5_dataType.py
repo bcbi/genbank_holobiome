@@ -1,5 +1,13 @@
 """
-Converting paupFiles per diet, class, family
+Downstream 5: Converts the PAUP files (output of DS3), 
+cleans up the data types, and applies coverage filtering
+
+Inputs: 
+    1) paup file of choice (output of DS3)
+    2) host information in the form of a CSC
+    3) name of the new file without extension
+    4) number above which coverage if chosen 
+    5) coverage file (output of DS4)
 """
 
 import pandas as pd 

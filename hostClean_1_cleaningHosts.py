@@ -1,6 +1,8 @@
 """
 Cleaning Hosts
 ONLY if you are updating cleaned hosts annotations
+Input: 1) host_bacteriaSpecies_preferred.csv
+        2) 
 """
 
 import pandas as pd
@@ -44,7 +46,7 @@ def speciesDictLoad():
     """
     Loads in speciesNames.txt
     """
-    with open("/users/vramanan/genbank_database_pipeline/speciesNames.txt", 'r') as f: 
+    with open("/users/vramanan/genbank_database_pipeline/hostSpeciesNames.txt", 'r') as f: 
         speciesDict = {}
         for line in f: 
             splitLine = line.split(":")

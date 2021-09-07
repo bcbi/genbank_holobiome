@@ -1,5 +1,9 @@
 """
-coverage Update
+Downstream 4: Creates a coverage file for DS5 to use 
+Input: 1) hostFiles/<group>_coverage.txt (one output of DS3)
+        2) name of new coverage file to use in DS5
+Author: Vivek Ramanan
+
 """
 
 import sys, string
