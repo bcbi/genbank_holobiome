@@ -9,6 +9,11 @@ Author: Vivek Ramanan
 import sys, string
 
 def turnListDict(line):
+    """
+    Turns each line starting with [ into a dictionary 
+    @param line: line of the file
+    @return retDict: the return dictionary version of the line
+    """
     table = str.maketrans(dict.fromkeys(string.punctuation))  # OR {key: None for key in string.punctuation}
     
     split = line.split(",")
@@ -23,6 +28,11 @@ def turnListDict(line):
     return retDict
 
 def revDict(microDict):
+    """
+    Reverses the dictionary to be based on species and not the host
+    @param microDict: microorganism dictionary
+    @return reverseDict
+    """
     reverseDict = {}
     for key in microDict:
         for val in microDict[key]:
@@ -33,6 +43,11 @@ def revDict(microDict):
     return reverseDict
 
 def writeRevDict(r, filename):
+    """
+    Writes the reverse dictionary to the given filename
+    @param r: reverseDict
+    @param filename: string of file
+    """
     with open(filename, 'w') as f:
         for key in r: 
             line = key + ";"

@@ -16,6 +16,12 @@ import numpy as np
 from numpy.random import choice
 
 def importCoverageDict(filename, cleanLabels):
+    """
+    Imports the coverage file as a dictionary
+    @param filename: name of the coverage file, output of DS4
+    @param cleanLabels: labels from the nexus file
+    @param coverageDict
+    """
     coverageDict = {}
     with open(filename, 'r') as f:
         for line in f:
@@ -36,6 +42,13 @@ def importCoverageDict(filename, cleanLabels):
     return coverageDict
 
 def writingNexus(d, dataType, chars, location):
+    """
+    Writes the nexus file
+    @param d: dictionary of the host and microorganism data
+    @param dataType: string of the new name
+    @param chars: labels of the characters
+    @param location: organ site (ex: GI)
+    """
     filename = "paupFiles/" + location + "_" + dataType + ".nex"
     print(len(d))
     with open(filename, 'w') as f:
@@ -51,6 +64,12 @@ def writingNexus(d, dataType, chars, location):
         f.write("end;\n")
 
 def writingHosts(d, dataType, location):
+    """
+    Writes a host file for outgroup checking
+    @param d: dictionary of the host and microorganism data
+    @param dataType: string of the new name
+    @param location: organ site (ex: GI)
+    """
     filename = "hostFiles/" + location + "_" + dataType + ".txt"
     with open(filename, 'w') as f:
         for key in d:
@@ -58,12 +77,24 @@ def writingHosts(d, dataType, location):
             f.write(temp + '\n')
 
 def mergeNames(original, add): 
+    """
+    Merges any duplicate names
+    """
     for i in range(len(original)):
         if add[i] == 1 and original[i] == 0:
             original[i] == 1
     return original
 
 def writingFiles(hostFile, newDict,cleanLabels, location, threshold, coverageDict):
+    """
+    Main process to recreate the new files and change names
+    @param hostFile: CSV of host information "hostUpdates.csv"
+    @param newDict: dictionary of line data from nexus file
+    @param cleanLabels: labels from nexus file
+    @param location: GI or ORAL
+    @param threshold: number that each host line data must meet
+    @param coverageDict: dictionary of coverage data
+    """
     hostsdf = pd.read_csv(hostFile)
     # Mosquito: Anopheles_sp
     updatedDict = {}

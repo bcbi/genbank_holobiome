@@ -8,6 +8,11 @@ import pandas as pd
 import sys, os
 
 def splitSpecies(dfFile, outputName): 
+    """
+    Splits the list of species from the dataframe CSV
+    @param dfFile: dataframe file
+    @param outputName: name of the output file
+    """
     df = pd.read_csv(dfFile, low_memory=False, usecols=['species','host_cleaned'])
     df = df.dropna(subset=['host_cleaned'])
     speciesNames = list(df['species'].value_counts().index)
