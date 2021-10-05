@@ -1,0 +1,11 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Wed May 19 15:19:44 2021]
+[!>Neighbor-joining search settings:
+>  Ties (if encountered) will be broken systematically
+>  Distance measure = mean character difference
+>  All characters have equal weight
+>  (Tree is unrooted)
+]
+tree nj = [&U] (((((((((Gallus_gallus:0.10084503,Mus_musculus:0.14405293):0.01026885,Homo_sapiens:0.13258829):0.02134819,(((Buffalo:0.09093637,Bubalus_bubalis:0.07232893):0.00745376,(((Equus_caballus:0.10938776,Bos_taurus:0.09469388):0.01573129,Ovis_aries:0.12712585):0.02725564,Capra_aegagrus_hircus:0.10539742):0.02826052):0.04087113,(Sus_scrofa:0.11800064,Rattus_norvegicus:0.06567283):0.01014927):0.01277171):0.00946917,(Felis_catus:0.10315689,Canis_familiaris:0.10092474):0.02257803):0.00380909,(Macaca_mulatta:0.08769133,(Anas_platyrhynchos:0.03475765,Pan_troglodytes:0.10809949):0.01434949):0.01978785):0.03075425,Columba_livia:0.08712930):0.01299825,((((((Mastomys_natalensis:0.02825746,Rhinolophus_ferrumequinum:0.01255887):0.03790087,(Rousettus_egyptiacus:0.04081633,Rattus_exulans:0.06122449):0.00291545):0.00892857,(Carollia_perspicillata:0.04702751,Cavia_porcellus:0.01419698):0.02168367):0.02770692,Gorilla_beringei:0.08964002):0.02765731,Eidolon_helvum:0.05142432):0.01840905,Rattus_rattus:0.06194810):0.00436464):0.01285475,Vulpes_vulpes:0.03999636):0.00620445,Meleagris_gallopavo:0.05584001);
+end;

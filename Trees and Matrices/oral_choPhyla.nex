@@ -1,0 +1,58 @@
+#NEXUS
+begin data;
+dimensions ntax=51 nchar=25;
+charlabels Synergistetes Negarnaviricota Basidiomycota Tenericutes Fusobacteria Nematoda Cyanobacteria Proteobacteria Chlamydiae Bacteroidetes Actinobacteria Duplornaviricota Peploviricota Artverviricota Cossaviricota Firmicutes Preplasmiviricota Ascomycota Kitrinoviricota Apicomplexa Parabasalia Pisuviricota Spirochaetes Cressdnaviricota Anelloviridae;
+matrix
+Sus_scrofa 0 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 0 1 0 0 1 0 1 0
+Gorilla_beringei 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0
+Cavia_porcellus 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0
+Rattus_rattus 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+Rhinolophus_ferrumequinum 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0
+Anas_platyrhynchos 0 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+Sapajus_nigritus 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+Scotophilus_kuhlii 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Vulpes_vulpes 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Rousettus_egyptiacus 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+Wallaby 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sabethes_Gymnothorax 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+Columba_livia 0 1 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Rattus_exulans 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Bos_taurus 0 1 0 1 0 0 0 1 0 0 1 1 0 0 1 1 0 0 1 1 0 1 0 0 0
+Delphinus 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0
+Rattus_norvegicus 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 1 0 1 1
+Canis_familiaris 1 1 0 1 1 0 0 1 0 1 1 0 0 0 1 1 0 0 0 0 0 0 1 0 0
+Gallus_gallus 0 1 0 0 0 0 0 1 1 1 1 0 1 0 0 0 1 0 0 0 0 1 0 0 0
+Carollia_perspicillata 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0
+Equus_caballus 0 1 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0
+Carollia_sowelli 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Pteropus_giganteus 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0
+Cynopterus_brachyotis 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Papio_anubis 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0
+Felis_catus 0 0 0 0 0 0 0 1 0 1 1 0 0 1 1 1 0 0 0 0 1 0 0 0 0
+Homo_sapiens 1 1 0 0 1 0 0 1 0 1 1 0 0 0 1 1 0 1 0 0 0 1 0 0 0
+Python 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Caretta_caretta 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+Zalophus_californianus 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+Eidolon_helvum 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 0 0 0 0 0
+Bothrops_insularis 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0
+Myotis_horsfieldii 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Bubalus_bubalis 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0
+Mirounga_angustirostris 0 0 0 1 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mus_musculus 0 0 0 0 0 0 0 1 0 1 1 0 0 1 0 1 1 0 0 0 0 1 0 0 0
+Capra_aegagrus_hircus 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0
+Meleagris_gallopavo 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Calidris_fuscicollis 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Triaenops_persicus 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0
+Pteropus_lylei 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+Canis_mesomelas 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+Macaca_mulatta 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0
+Mastomys_natalensis 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Hipposideros_gigas 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Dama_dama 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+Ovis_aries 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+Buffalo 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Pan_troglodytes 0 0 0 0 0 0 1 1 0 1 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0
+Tyto_alba 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+Pteropus_alecto 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+;
+end;
