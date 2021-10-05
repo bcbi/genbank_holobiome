@@ -1,0 +1,35 @@
+#NEXUS
+begin data;
+dimensions ntax=28 nchar=49;
+charlabels Synergistetes Evosea Nematoda Statovirus Blastocystis Peploviricota Verrucomicrobia Preplasmiviricota Ascomycota Iotatorquevirus Apicomplexa Elusimicrobia Negarnaviricota Tenericutes Fusobacteria Cyanobacteria Duplornaviricota Annelida Chytridiomycota Artverviricota Firmicutes Parabasalia Gyrovirus Mucoromycota Cressdnaviricota Zoopagomycota Lentisphaerae Anelloviridae Fornicata Basidiomycota Ciliophora Chlorophyta Cossaviricota Euryarchaeota Phixviricota Kitrinoviricota Spirochaetes Euglenozoa Fibrobacteres Uroviricota Thetatorquevirus Proteobacteria Chlamydiae Bacteroidetes Actinobacteria Streptophyta Pisuviricota Deferribacteres Microsporidia;
+matrix
+Gallus_gallus 1 0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 1 0 0 1 1 0 1 0 1 0 0 0 0 0 0 0 1 1 0 1 1 0 0 1 0 1 0 1 1 0 1 0 0
+Felis_catus 0 0 1 0 1 0 0 1 0 0 1 0 1 1 1 0 1 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 1 0 1 0 0 0 0 0 0 1 0 1 1 0 1 0 1
+Macaca_mulatta 0 1 1 1 1 1 0 1 0 0 1 0 1 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 1 0 1 1 0 1 0 1
+Mastomys_natalensis 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Buffalo 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 1 0 1 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 1 1 0 1 0 0
+Equus_caballus 0 0 1 0 0 0 0 0 0 0 1 1 0 1 0 0 1 0 1 0 1 0 0 1 0 0 0 0 1 0 1 0 0 1 0 0 1 0 1 1 0 1 1 1 1 0 1 0 1
+Eidolon_helvum 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 1
+Rattus_rattus 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0
+Rhinolophus_ferrumequinum 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+Anas_platyrhynchos 0 0 1 0 1 1 0 1 0 0 1 0 1 0 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 1 0 1 0 1
+Carollia_perspicillata 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+Mus_musculus 0 0 1 0 0 0 1 1 1 0 1 0 1 1 0 0 1 0 0 0 1 1 0 1 1 1 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 1 1 0 1 1 0
+Ovis_aries 1 0 1 0 1 0 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 1 0 0 0 0 0 0 1 0 1 0 0 1 0 0 1 0 0 0 0 1 0 1 1 1 1 0 1
+Bos_taurus 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 0 0 1 1 1 0 0 1 0 1 1 0 0 0 0 1 1 1 1 0 1 0 0
+Canis_familiaris 0 0 1 0 0 0 0 1 1 0 1 0 1 0 0 0 1 0 0 0 1 1 0 0 1 0 0 0 1 1 0 1 1 0 0 1 0 0 0 0 1 1 0 1 1 0 1 0 1
+Rousettus_egyptiacus 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+Cavia_porcellus 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+Meleagris_gallopavo 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0
+Gorilla_beringei 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1
+Capra_aegagrus_hircus 1 1 1 0 1 0 0 0 0 0 1 0 1 1 0 0 1 0 1 1 1 0 0 0 0 0 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 0 1
+Bubalus_bubalis 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 1 1 0 0 0 0 0 0 1 0 1 0 1 1 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0
+Pan_troglodytes 0 0 1 0 1 1 0 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 1 0 0 1 0 1 0 0
+Sus_scrofa 1 0 1 0 1 0 0 0 0 1 1 0 0 1 1 0 1 0 0 0 1 0 0 0 1 0 1 0 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 1 0 1 0 1
+Columba_livia 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 0 1 0 0 1 1 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 0 1
+Rattus_exulans 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+Vulpes_vulpes 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0
+Rattus_norvegicus 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 1 1 0 0 0 1 0 1 1 0 1 0 0
+Homo_sapiens 0 1 1 0 0 0 1 1 1 0 1 0 0 1 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 0 1 0 1 1 1 1 0 1
+;
+end;
