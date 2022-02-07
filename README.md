@@ -1,4 +1,4 @@
-# Genbank Database Pipeline - Version 2 
+# Genbank Database Pipeline 
 #### Authors: Vivek Ramanan and Shanti Mechery 
 
 The GenBank DataBase Pipeline has two purposes: to map source site data
