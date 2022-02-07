@@ -174,6 +174,12 @@ def writingFiles(hostFile, newDict,cleanLabels, location, threshold, coverageDic
     return
 
 def openPaupFile(filename):
+    """
+    Reading PAUP file into dictionary
+    @param filename: filename of paup file
+    @return linesDict: dictionary of each line, host as key, value as 0/1 array
+            cleanLabels: labels of all columns, list
+    """
     with open(filename, 'r') as f: 
         lines = []
         m = False

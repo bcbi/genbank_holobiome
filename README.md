@@ -6,9 +6,9 @@ from the National Center for Biotechnology Information's GenBank Database
 to their preferred name according to the the National Institute of Health's
 United Medical Language System and to create a matrix of bacteria species
 and host species data, both also from the National Center for Biotechnology
-Information's GenBank Database, pertaining to a specific source site. Thefirst
+Information's GenBank Database, pertaining to a specific source site. The first
 part is the Upstream Process and the second part is the Downstream Process.
-This matrix created in the Downstream Process will be a part of a NEXUS le,
+This matrix created in the Downstream Process will be a part of a NEXUS file,
 which can be used as input for PAUP*, a phylogenetic analysis software that
 creates phlyogentic trees. Each section of this guide explains the processes
 in further detail. If the most up-to-date input data from the GenBank database
@@ -37,10 +37,14 @@ of this pipeline.
 Dependencies: 
 1. Julia
 2. Python3
-3. BioPython (Entrez) and NCBI Entrez Account information
-4. Pandas and Numpy
+    - BioPython (Entrez) and NCBI Entrez Account information
+    - Pandas and Numpy
+    - SKLearn, markov_clustering, and NetworkX
+3. R
+    - ggTree and treeIO
+4. TimeTree.org
 
-** If using Oscar, run ALL of these only using Batch jobs (or interact jobs for testing)
+** If using Oscar, run ALL of these only using Batch jobs (or interact jobs for testing) **
 
 ## Data Download and Processing Process: 
 
@@ -96,7 +100,7 @@ tables directly, you will need to use MySQLDump.
 mysqldump --enable-cleartext-plugin -h <DBname> -u <username> -p <password> genbank tissueLocus > tissueLocus.sql
 ```
 ** occasionally I have noticed that the space between "-p" and the password can cause errors. 
-Try using without a space between the -p flag and the password if this occurs. 
+Try using without a space between the -p flag and the password if this occurs. **
 
 4. Converting .SQL files into .CSV
 
@@ -139,7 +143,7 @@ then joined them all together after for the following steps.
 
 Each UMLS concept has a Semantic Type and this script filters for the Semantic Types that we want,
 which is specific to body parts and organs. 
-** If updating cleaned_host_annotations, please use semanticHost.txt here instead 
+** If updating cleaned_host_annotations, please use semanticHost.txt here instead **
 
 Input: sourceSite_MetaMap_output.txt
 Output: 1) sourceSite_MetaMap_parsed.csv
@@ -217,7 +221,7 @@ $ julia downstream_1_createHostSpecies.jl cleaned_host_annotations.csv sourceSit
 2. downstream_2_mergeAndGroup.py
 
 This script takes the two source site CSVs (isolation_source and tissue_type) and merges them together. 
-It also adds a grouping category for the source site, in which body organs of interest (GI and Oral in particular), 
+It also adds a grouping category for the source site, in which body organs of interest (GI in particular), 
 are grouped and given group names in a separate column "group". 
 
 Input: 1) isolation_Host_Bacteria.csv
@@ -277,14 +281,14 @@ to customize the grouping and host requirements before making the PAUP file.
 $ julia downstream_3_createMatrix.jl <search term> merged_Host_Bacteria_Spcies.csv <output.nex> <group or specific> <taxonomic resolution> <row number limit>
 ```
 - Search Term: this will be the term that is searched in either the group or species column
-    - Group example: GI, ORAL
+    - Group example: GI
     - Specific example: Intestine, Stomach
 - Output.nex: name of output file in NEXUS format
 - Group or Specific: decides whether you will be searching by Group or by specific source site
     - This is a binary switch - if group is NOT input, it will use the source site column
 - Taxonomic resolution: species, genus, family, order, class, phylum 
 - Row number limit: this ensures that every host included in the file has AT LEAST the row number limit 
-    entries of microorganisms (I used 2 for ORAL and 4 for GI)
+    entries of microorganisms (I used 4 for GI)
 
 Outputs: 
     1) output.nex
@@ -306,24 +310,81 @@ $ python3 downstream_5_dataType.py <outputDS3.nex> hostUpdates.csv <output names
 ```
 - outputDS3.nex: output from Downstream 3
 - hostUpdates.csv: This is a CSV I manually created to ensure which hosts ended up in the final file
-    - Columns: Newick_label, updatedScientificName, Diet, family, order, class, correctedName, domestication
-    - Newick_label: the updatedScientificName but with all spaces replaced with underscore so it is one word
-    - Diet: O omnivore, H herbivore, C carnivore 
+    - Columns: Newick_label, updatedScientificName, family, order, class, correctedName
+    - Newick_label: the updatedScientificName but with all spaces replaced with underscore so it is one word 
     - correctedName: in case the updatedScientificName is incorrect, I used this to update the name
         or merge two labels together (such as one scientific name and one common name)
-    - domestication: W wild, D domesticated
 - output names: there are multiple output files, so I inputted a phrase that will start all the output files
     - Output files: <group>_updated.nex and hostFiles/<group>_updated.txt
     - First is the nexus file for use, second is a list of all hosts 
     - The second file is necessary for finding out the outgroup in tree creation
 - upper threshold for coverage: all hosts ABOVE this number will be coverage updated to this number
-    - EX: 10 for ORAL and 20 for GI
+    - EX: 20 for GI
 - outputDS4.txt: output coverage file from downstream 4
 
-## PAUP Trees and Visualizaton
+# Visualizaton
 
-#### Neighbor Joining Commands: 
+1. vis1_speciesComposition.py
+
+This script finds the species composition at the **SPECIES** level. To get the species file, make sure to run
+downstream step 3 (need not run downstream steps 4 and 5 because coverage normalization is not required here).
+This is an example command:
 ```
+$ julia downstream_3_createMatrix.jl GI merged_Host_Bacteria_Spcies.csv gi_species.nex group species 4
+```
+
+Using this output file (gi_species.nex), we can analyze the number of unique species present in each phylum. 
+This script will create a percentage based stacked bar chart to visualize the output of host groups of interest.
+
+```
+$ python3 vis1_speciesComposition.py gi_species.nex hostUpdates.csv taxonomyDict.txt <outputFile>
+```
+hostUpdates.csv and taxonomyDict.txt are both located in the Data/ folder.
+
+2. vis2_diversityAnalysis.py
+
+Runs a hill numbers approach of biodiversity estimation across the sample dataset. 
+```
+python3 vis2_diversityAnalysis.py gi_phyla.nex hostUpdates.csv <outputFile>
+```
+This can be run on both the phyla and species level files to contrast the difference between 
+biodiversity estimation in both. 
+
+3. vis3_networkClustering.py
+
+Runs the Markov Clustering Algorithm on phylum level data to find clustering groups of hosts. 
+Also analyzes cluster microbiome composition similarities as well as creates three visualization
+files in a directory of choice: MCL cluster network, presence-absence general network, and 
+mammalian similarity network. Cosine similarity is the metric for pairwise similarity. 
+```
+python3 vis3_networkClustering.py gi_phyla.nex hostUpdates.csv <outputDirectory>
+```
+All network files can be visualized in CytoScape. The basic process I used in Cytoscape is the following:
+- Load in the network
+- Layout -> Grouped Layout -> Cluster / Taxonomy (cluster for MCL, taxonomy for other two networks)
+- Tools -> Analyze Network
+- Style -> coloring based on taxonomy and node size based on degree
+
+4. vis4_phyloTree.r - Steps for Phylogenetic Trees
+
+The creation of the microbiome tree requires a few different steps: 
+- Using gi hosts file (output from Downstream 5) in timetree.org to find outgroup (I used Octopus_vulgaris)
+- Export this tree in newick format to save as true evolutionary tree for hosts
+    - there may be hosts that do not have the same naming conventions as hosts in the dataset 
+    - I dealt with this by manually including data for these new host names
+- Running the phylum presence absence data (gi_phyla.nex) through PAUP neighbor joining with outgroup
+- Visualizing both microbiome and evolutionary tree with vis4_phyloTree.r
+
+#### Timetree.org
+Input in host file (each line is different host)
+** make sure host names (genus and species) are separated by a space and NOT UNDERSCORE **
+Note down oldest evolutionary branch and organism (Octupus_vulgaris)
+Export tree in newick format in bottom left
+
+#### PAUP Neighbor Joining Commands: 
+Run PAUP neighbor joining on the gi_phyla.nex data
+```
+paup
 execute <filename> 
 set criterion=distance maxtrees=200 increase=no
 hsearch
@@ -331,15 +392,7 @@ set root=outgroup
 outgroup <name of single host or multiple>
 nj brlens=yes treefile=<outputFile>
 ```
-#### Finding Outgroups: 
+#### Tree Visualization: vis4_phyloTree.r
 
-Using timetree.org, upload the hostFiles/<group>_updated.txt file from downstream 5. Then use the 
-hhost that is the furthest from the rest of the hosts as the outgroup. Here are my outgroups: 
-GI: Octopus_mimus
-ORAL: Bothrops_insularis
-Tanglegram: Meleagris_gallopavo
-
-#### Visualization: 
-
-I used GGTree in R (alongside TreeIO) to visualize the trees. The code I used is in PhyloTreeScript.Rmd.
-
+Visualization of trees using TreeIO and GGTree, using a slightly different hostUpdates CSV file.
+I modified this to include hosts with different names from TimeTree.org. 
